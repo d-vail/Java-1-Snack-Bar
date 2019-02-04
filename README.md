@@ -44,3 +44,23 @@ A shippable JAR file including multi Class application.
 - Customer 1 buys 1 of snack 2. Print Customer 1 Cash on Hand. Print quantity of snack 2.
 - Snack 3 gets 12 more. Print quantity of snack 3.
 - Customer 2 buys 3 of snack 3. Print Customer 2 Cash on hand. Print quantity of snack 3.
+
+## Compile and Run Instructions
+
+To compile `cd` into `/src` and run:
+
+```` bash
+javac snackBarApp/*.java
+````
+
+To prepare a shippable application (JAR file) run:
+
+```` bash
+jar cvfe SnackBarApp.jar snackBarApp.Main snackBarApp/*.class
+````
+
+To execute the application run:
+
+```` bash
+java -jar SnackBarApp.jar
+````
