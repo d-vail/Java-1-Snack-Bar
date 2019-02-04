@@ -27,5 +27,6 @@ public class VendingMachine {
   @Override
   public String toString() {
     String rtnStr = "Vending Machine #" + id + ": " + name;
+    return rtnStr;
   }
 }

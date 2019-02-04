@@ -2,6 +2,7 @@ package snackBarApp;
 
 public class Customer {
   private static int maxId = 0;
+  private int id;
   private String name;
   private double cashOnHand;
 
@@ -36,5 +37,6 @@ public class Customer {
   @Override
   public String toString() {
     String rtnStr = "Customer #" + id + ": " + name + " with $" + cashOnHand;
+    return rtnStr;
   }
 }
