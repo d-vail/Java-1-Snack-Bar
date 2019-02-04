@@ -31,5 +31,10 @@ public class Customer {
 
   public void buy(double total) {
     cashOnHand -= total;
-  } 
+  }
+
+  @Override
+  public String toString() {
+    String rtnStr = "Customer #" + id + ": " + name + " with $" + cashOnHand;
+  }
 }

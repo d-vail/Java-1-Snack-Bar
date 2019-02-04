@@ -39,4 +39,10 @@ public class Snack {
 
     return total;
   }
+
+  @Override
+  public String toString() {
+    String rtnStr = "Snack #" + id + ": " + quantity + " " + name + " at " + cost + " in vending machine " + vendingMachineId;
+    return rtnStr;
+  }
 }
