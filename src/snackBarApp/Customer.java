@@ -14,8 +14,8 @@ public class Customer {
     this.cashOnHand = cashOnHand;
   }
 
-  public String getName() {
-    return name;
+  public int getId() {
+    return id;
   }
 
   public void setName(String name) {
@@ -30,8 +30,11 @@ public class Customer {
     cashOnHand += cash;
   }
 
-  public void buy(double total) {
-    cashOnHand -= total;
+  public void buy(int quantity, Snack snack) {
+    double totalCost = snack.getTotalCost(quantity);
+    cashOnHand -= totalCost;
+
+    snack.buySnack(quantity);
   }
 
   @Override
