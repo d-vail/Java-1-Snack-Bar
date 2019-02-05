@@ -8,14 +8,22 @@ public class Snack {
   private double cost;
   private int vendingMachineId;
 
-  public Snack(String name, int quantity, double cost, int vendingMachineId) {
+  public Snack(String name, int quantity, double cost, VendingMachine vm) {
     maxId++;
     id = maxId;
 
     this.name = name;
     this.quantity = quantity;
     this.cost = cost;
-    this.vendingMachineId = vendingMachineId;
+    this.vendingMachineId = vm.getId();
+  }
+
+  public int getId() {
+    return id;
+  }
+
+  public String getName() {
+    return name;
   }
 
   public void setName(String name) {
@@ -36,7 +44,6 @@ public class Snack {
 
   public double getTotalCost(int quantity) {
     double total = quantity * this.cost;
-
     return total;
   }
 
